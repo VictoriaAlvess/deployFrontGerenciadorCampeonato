@@ -66,7 +66,6 @@
             text-align: center;
         }
 
-
         .bloco-imagens{
             display: flex;
             align-items: center;
@@ -140,29 +139,30 @@
         </div>
     </header>
     <div class="titulo">
-        <h1>Unidades</h1>
+        <h1>Quadras</h1>
     </div>
     <div class="central">
-        <!-- <table border="1">
+        <table border="1">
             <tr>
                 <th>Nome</th>
+                <th>Codigo Quadra</th>
+                <th>Unidade</th>
                 <th>Codigo Unidade</th>
                 <th>Logradouro</th>
                 <th>Bairro</th>
                 <th>CEP</th>
-                <th>Funcionario</th>
-                
             </tr>
             <tr>
+                <td>Quadra Raposos</td>
+                <td>01</td>
                 <td>Raposos FC</td>
                 <td>011</td>
                 <td>Alameda Imbuia 136</td>
-                <td>Jd do GOlf I</td>
+                <td>Jd do Golf I</td>
                 <td>06642450</td>
-                <td>Boltralha</td>
             </tr>
             
-        </table> -->
+        </table>
         <img src="adicionar.png" id="add" onclick="exibirFormulario()">
 
     </div>
@@ -170,18 +170,28 @@
         <div id="formulario">
             <span class="close" id="closeModalBtn">&times;</span>
             <h2>Adicionar Quadra</h2>
-            <form method="post" action="processa.php"  >
+            <form>
                 <label for="nome">Nome:</label>
                 </br>
                 <input type="text" id="nome" name="nome">
                 </br>
 
-                <label for="codigo-unidade">Código Unidade:</label>
+                <label for="codigo">Código Quadra:</label>
+                </br>
+                <input type="text" id="codigo-quadra" name="codigo-quadra">
+                </br>
+                
+                <label for="unidade">Unidade:</label>
+                </br>
+                <input type="text" id="unidade" name="unidade">
+                </br>
+
+                <label for="codigo">Código Unidade:</label>
                 </br>
                 <input type="text" id="codigo-unidade" name="codigo-unidade">
                 </br>
 
-                <label for="logradouro">Logradouro:</label>
+                <label for="bairro">Logradouro:</label>
                 </br>
                 <input type="text" id="logradouro" name="logradouro">
                 </br>
@@ -191,15 +201,11 @@
                 <input type="text" id="bairro" name="bairro">
                 </br>
 
-                <label for="cep">CEP:</label>
+                <label for="bairro">CEP:</label>
                 </br>
                 <input type="text" id="cep" name="cep">
                 </br>
                 
-                <label for="funcionario">Funcionario:</label>
-                </br>
-                <input type="num" id="funcionario" name="funcionario">
-                </br>                
                 <button type="submit">Adicionar</button>
             </form>
         </div>
