@@ -170,7 +170,7 @@
         <div id="formulario">
             <span class="close" id="closeModalBtn">&times;</span>
             <h2>Adicionar Quadra</h2>
-            <form method="post" action="https://gerenciador-campeonato-2e7defb0ad25.herokuapp.com/"  >
+            <form onsubmit="sendForm(event)">
                 <label for="nome">Nome:</label>
                 </br>
                 <input type="text" id="nome" name="nome">
@@ -205,6 +205,31 @@
         </div>
     </div>
     <script>
+
+        
+        function sendForm(event) {
+            event.preventDefault();
+            const form = document.querySelector("form");
+            // const submitter = document.querySelector("button[value=save]");
+            const formData = new FormData(form);
+            console.log(formData);
+
+            let res = fetch("https://gerenciador-campeonato-2e7defb0ad25.herokuapp.com/", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                return data;
+            })
+            .catch(error => console.log(error));
+
+            console.log(res);
+            }
+            
+
+
         function exibirFormulario() {
             var formulario = document.getElementById('formulario');
             formulario.style.display = 'block';
