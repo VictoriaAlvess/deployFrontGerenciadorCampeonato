@@ -162,7 +162,7 @@ $linhas = mysqli_affected_rows($conexao);
             <a class="links" href="cadastrar.html">Cadastrar</a>
             <a class="links" href="cadastrar.html">Campeonatos</a>
             <a class="links" href="unidades.php">Unidades</a>
-            <a class="links" href="telaQuadras.html">Quadras</a>
+            <a class="links" href="index.html">Quadras</a>
         </div>
     </header>
     <div class="titulo">
